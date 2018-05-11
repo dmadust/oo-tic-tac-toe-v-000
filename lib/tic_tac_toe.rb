@@ -85,5 +85,7 @@ class TicTacToe
     display_board
   end
   
+  def play 
+  end
   
 end
