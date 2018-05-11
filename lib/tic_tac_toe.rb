@@ -60,6 +60,7 @@ class TicTacToe
         return combo
       end
     end
+    nil
   end
   
   
