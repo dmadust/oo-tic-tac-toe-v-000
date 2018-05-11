@@ -74,6 +74,18 @@ class TicTacToe
   end
   
   def turn
+    puts "Please enter 1-9:"
+    input = gets.strip
+    index = input_to_index(input)
+    until valid_move?(board, index)
+      input = gets.strip
+      index = input_to_index(input)
+    end
+    move(board, index, current_player(board))
+    display_board(board)
+  end
+  
+  def turn
     puts "Specify the space you'd like to play (1-9)"
     input = gets.strip
     index = input_to_index(index)
