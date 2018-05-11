@@ -56,4 +56,8 @@ class TicTacToe
     @board.all?{|space| space == "X" || space == "O"}
   end
   
+  def draw?
+    
+  end
+  
 end
