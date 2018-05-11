@@ -31,6 +31,14 @@ class TicTacToe
     index.between?(0, 8) && !position_taken?(index)
   end
   
+  def turn_count
+    @board.count{|space| space == "X" || space == "O"}
+  end
+  
+  def current_player
+    turn_count % 2 == 0 ? "X" : "O"
+  end
+  
   def turn
     puts "Specify the space you'd like to play (1-9)"
     input = gets.strip
@@ -40,14 +48,6 @@ class TicTacToe
       index = input_to_index(index)
     end
     move(index, current_player)
-  end
-  
-  def turn_count
-    @board.count{|space| space == "X" || space == "O"}
-  end
-  
-  def current_player
-    turn_count % 2 == 0 ? "X" : "O"
   end
   
   def won?
