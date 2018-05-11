@@ -85,7 +85,10 @@ class TicTacToe
     display_board
   end
   
-  def play 
+  def play
+    until over?
+      turn
+    end
   end
   
 end
