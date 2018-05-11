@@ -34,6 +34,7 @@ class TicTacToe
   def turn
     puts "Specify the space you'd like to play (1-9)"
     input = gets.strip
+    index = input_to_index(index)
   end
   
   
