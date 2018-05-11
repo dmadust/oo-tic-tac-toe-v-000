@@ -39,17 +39,6 @@ class TicTacToe
     turn_count % 2 == 0 ? "X" : "O"
   end
   
-  def turn
-    puts "Specify the space you'd like to play (1-9)"
-    input = gets.strip
-    index = input_to_index(index)
-    until valid_index?(index)
-      input = gets.strip
-      index = input_to_index(index)
-    end
-    move(index, current_player)
-  end
-  
   def won?
     WIN_COMBINATIONS.each do |combo|
       position0 = combo[0]
@@ -62,10 +51,5 @@ class TicTacToe
     end
     return nil
   end
-  
-  
-  
-  
-  
   
 end
