@@ -57,6 +57,8 @@ class TicTacToe
       position2 = combo[2]
       if (position0 == "X" && position1 == "X" && position2 == "X") ||
         (position0 == "O" && position1 == "O" && position2 == "O")
+        return combo
+      end
     end
   end
   
