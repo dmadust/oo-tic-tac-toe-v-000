@@ -85,16 +85,5 @@ class TicTacToe
     display_board
   end
   
-  def turn
-    puts "Specify the space you'd like to play (1-9)"
-    input = gets.strip
-    index = input_to_index(index)
-    until valid_index?(index)
-      input = gets.strip
-      index = input_to_index(index)
-    end
-    move(index, current_player)
-  end
-  
   
 end
