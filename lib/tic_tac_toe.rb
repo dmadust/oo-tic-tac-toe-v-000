@@ -51,7 +51,13 @@ class TicTacToe
   end
   
   def won?
-    
+    WIN_COMBINATIONS.each do |combo|
+      position0 = combo[0]
+      position1 = combo[1]
+      position2 = combo[2]
+      if (position0 == "X" && position1 == "X" && position2 == "X") ||
+        (position0 == "O" && position1 == "O" && position2 == "O")
+    end
   end
   
   
